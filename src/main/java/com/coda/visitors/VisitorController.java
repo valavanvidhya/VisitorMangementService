@@ -1,12 +1,10 @@
 package com.coda.visitors;
 
-
 import org.springframework.web.bind.annotation.*;
 import java.sql.SQLException;
 import java.util.List;
 
 @RestController
-
 
 
 public class VisitorController {
@@ -65,8 +63,8 @@ public class VisitorController {
     }
 
     @GetMapping("/getvisitor/{VisitorId}")
-    public VisitorModel2 getSingleVisitor(int VisitorId) throws SQLException {
-
+    public VisitorModel2 getSingleVisitor(Integer VisitorId) throws SQLException {
+       
 
         return repo.getsinglevisitor(VisitorId);
 

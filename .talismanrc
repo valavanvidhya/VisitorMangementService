@@ -1,0 +1,4 @@
+fileignoreconfig:
+- filename: src/main/java/com/coda/visitors/VisitorRepo.java
+  checksum: acd82bec908fd58f42ad37c018a8c30abd39b5f9d2af9c69b18f88307b1a8786
+  ignore_detectors: []

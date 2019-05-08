@@ -12,10 +12,10 @@ public class VisitorModel2 {
     private String currentdate;
 
 
-    public int getVisitorId() {
+    public Integer getVisitorId() {
         return visitorId;
     }
-    public void setVisitorId(int visitorId) {
+    public void setVisitorId(Integer visitorId) {
         this.visitorId = visitorId;
     }
     public String getInTime(String timeValue) {

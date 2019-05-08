@@ -28,7 +28,7 @@ public class VisitorRepo {
 
         String url = "jdbc:mysql://localhost:3306/visitors";
         String username = "root";
-        String password = "Alldbest@123";
+        String password = "hajaja";
         try{
             Class.forName("com.mysql.cj.jdbc.Driver");
             con = DriverManager.getConnection(url,username,password);
@@ -42,6 +42,8 @@ public class VisitorRepo {
     public void createVisitor(VisitorModel visitor) throws SQLException {
 
         visitor.setOutTime("null");
+        visitor.setInTime(timeValue);
+        visitor.setCurrentdate(dateValue);
 
         String sql = "insert into visitortable values(default,?,?,?,?,?,?,?)";
 
@@ -135,8 +137,6 @@ public class VisitorRepo {
         VisitorModel2 visitor = new VisitorModel2();
         if(rs.next()) {
             visitor.setVisitorId(rs.getInt(1));
-            visitor.setName(rs.getString(2));
-
             list.add(visitor);
         }
         return visitor;
